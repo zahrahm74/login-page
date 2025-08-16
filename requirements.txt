@@ -1,0 +1,13 @@
+(cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF'
+diff --git a/requirements.txt b/requirements.txt
+--- a/requirements.txt
+ b/requirements.txt
+@@ -0,0 1,6 @@
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+Flask-JWT-Extended==4.5.3
+bcrypt==4.0.1
+python-dotenv==1.0.0
+Werkzeug==2.3.7
+EOF
+)
